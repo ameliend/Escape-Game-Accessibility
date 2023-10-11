@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission 2 - Escape Game Accessible</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="nocursor">
+    <header>
+        <div class="banner">
+            <div class="banner-image">
+                <img src="assets/images/alexandra.jpg" alt="Alexandra de la Flamme">
+            </div>
+            <div class="banner-overlay"></div>
+        </div>
+        <a href="index.html#accueil" class="retour-link">Retour à la page d'accueil</a>
+        <h1>Mission : activer le CTA</h1>
+    </header>
+    <main class="totalscreen nocursor">
+        <p>De rage, Alexandra a mordillé le câble de la souris et a versé de l'alcool à brûler sur le trackpad, désactivant tout pointeur. Pas de chance, le focus n'a pas été bien intégré dans le code. Trouve une autre solution pour actionner le bouton et avoir un nouvel indice.</p>
+        <div class="button-container">
+            <button class="identical-button nocursor">Ne cliquez pas ici</button>
+            <button class="identical-button nocursor" >Ne cliquez pas ici</button>
+            <button class="identical-button nocursor" >Ne cliquez pas ici</button>
+            <button class="identical-button nocursor" >Ne cliquez pas ici</button>
+            <button class="identical-button nocursor" >Ne cliquez pas ici</button>
+            <button class="identical-button nocursor" >Ne cliquez pas ici</button>
+            <button class="identical-button nocursor" >Ne cliquez pas ici</button>
+            <button class="identical-button nocursor" >Ne cliquez pas ici</button>
+            <button class="identical-button nocursor" >Ne cliquez pas ici</button>
+            <button class="identical-button nocursor" >Ne cliquez pas ici</button>
+            <button class="identical-button nocursor" >Ne cliquez pas ici</button>
+            <button class="identical-button nocursor" >Ne cliquez pas ici</button>
+            <button class="identical-button nocursor" >Ne cliquez pas ici</button>
+            <button class="identical-button nocursor" >Ne cliquez pas ici</button>
+            <button class="identical-button nocursor" >Ne cliquez pas ici</button>
+            <button class="identical-button nocursor" id="win-button" tabindex="0">Cliquez ici</button>
+            <button class="identical-button nocursor" >Ne cliquez pas ici</button>
+
+        </div>
+        <!-- Modale "Bravo" -->
+        <div id="win-modal" class="modal" role="dialog" aria-modal="true">
+            <div class="modal-content">
+                <span class="close" id="close-win-modal" tabindex="0">&times;</span>
+                <h2 id="win-modal-title"><span role="img" aria-hidden="true">🎉</span> Bravo !</h2>
+                <img src="assets/images/alexandramission.jpg" alt="Alexandra est énervée">
+                <p id="win-modal-message">Certains handicaps ne permettent pas une navigation avec une souris (déficience visuelle, paralysie des membres supérieurs...). La navigation se fait donc avec le clavier ou tout autre device adapté permettant de naviguer de composant en composant. Il est important que tous les compsants reçoivent le focus et que celui-ci soit bien visible afin de se positionner sur la page</br>
+                Indice : Épisode 1</p>
+                
+            </div>
+        </div>
+    </main>
+        <script src="assets/js/script_keyboard.js"></script>
+</body>
+</html>

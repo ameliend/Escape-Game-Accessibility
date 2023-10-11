@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Game Accessible - accueil</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    
+    <div id="overlay-index">
+    <form id="codeForm">
+        <label for="premiercodeInput">Entrez le code à 4 chiffres :</label>
+        <input type="text" id="premiercodeInput" pattern="[0-9]{4}" maxlength="4" required>
+        <button type="button" id="validerpremierCode">Valider</button>
+    </form>
+</div>
+
+    <header>
+        <div class="fullscreen-image" role="img" aria-label="Canal+ Accessible">
+            <h1 class="index_title"><span role="img" aria-hidden="true">🔥</span> L'escape Game <span role="img" aria-hidden="true">🔥</span></h1>
+        </div>
+    </header>
+    <main>
+
+        <p>Marc essaie de retrouver sa belle Orchidée rencontré lors du tournage de la Flamme. Mais elle est maintenue prisonnière par Alexandra dans une prison desaffectée. Marc a réussi à trouver cette prison mais il lui manque le code pour délivrer sa douce.</p>
+
+        <p>A toi d'aider Marc à réussir les différentes missions afin de collecter les indices pour avoir le code final. </p>
+
+        <ul class="aligned-left marginh2">
+            <li>Pour naviguer au clavier : "Tab" pour avancer, "shift+Tab" pour reculer.</li>
+            <li>Tu auras besoin d'un ordinateur (celui sur lequel tu es) et un bloc note pour ne pas oublier les différents indices. </li>
+        </ul>
+        
+
+        <h2 id="accueil" class="marginh2">Missions :</h2>
+
+        <div class="mission-cards">
+    <div class="mission-card">
+        <h3>Mission 1</h3>
+        <p>Le quiz du présentateur</p>
+        <a href="mission1.html" aria-label="Commencer la mission 1">Commencer</a>
+    </div>
+
+    <div class="mission-card">
+        <h3>Mission 2</h3>
+        <p>Les dégâts d'Alexandra</p>
+        <a href="mission2.html" aria-label="Commencer la mission 2">Commencer</a>
+    </div>
+
+     <div class="mission-card">
+        <h3>Mission 3</h3>
+        <p>Les yeux d'Émilie</p>
+        <a href="mission3.html" aria-label="Commencer la mission 3">Commencer</a>
+    </div>
+
+    <div class="mission-card">
+        <h3>Mission 4</h3>
+        <p>"L'aide" d'Anne</p>
+        <a href="mission4.html" aria-label="Commencer la mission 4">Commencer</a>
+    </div>
+
+    <div class="mission-card">
+        <h3>Mission 5</h3>
+        <p>Les tremblements de Claude</p>
+        <a href="mission5.html" aria-label="Commencer la mission 5">Commencer</a>
+    </div>
+
+    <div class="mission-card">
+        <h3>Mission 6</h3>
+        <p>La dyslexie de Marina</p>
+        <a href="mission6.html" aria-label="Commencer la mission 6">Commencer</a>
+    </div>
+
+     <div class="mission-card">
+            <h3>Mission 7</h3>
+            <p>Les couleurs de Chataléré </p>
+            <a href="mission7.html" aria-label="Commencer la mission 7">Commencer</a>
+    </div>
+
+</div>
+    <form id="codeForm">
+        <label for="codeInput">Entrez le code :</label>
+        <div class="input-button-container">
+            <input type="text" id="codeInput" placeholder="Entrez le code ici">
+            <button type="button" id="validerCode">Sauver Orchidée</button>
+        </div>
+    </form>
+        
+
+        <!-- Modal pour le code correct -->
+<div id="modalCodeCorrect" class="modal" role="alertdialog" aria-modal="true">
+    <div class="modal-content">
+        <span class="close" id="closeCodeCorrectModal" tabindex="0" aria-label="Fermer la fenêtre modale">&times;</span>
+        <h2 id="modalCodeCorrectTitle"><span role="img" aria-hidden="true">🎉</span> Bravo ! Tu as libéré la belle Orchidée !</h2>
+        <img src="assets/images/final.jpg" alt="Marc et Orchidée main dans la main">
+    </div>
+</div>
+
+<!-- Modal pour le code incorrect -->
+<div id="modalCodeIncorrect" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-content">
+        <span class="close" id="closeCodeIncorrectModal" tabindex="0" aria-label="Fermer la fenêtre modale">&times;</span>
+        <h2 id="modalCodeIncorrectTitle">Code Incorrect</h2>
+        <img src="assets/images/codefaux.jpg" alt="Orchidée fait un doigt d'honneur">
+        <p id="modalCodeIncorrectMessage">Même Orchidée y avait cru ...</p>
+    </div>
+</div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Made by Amélien Delahaie</p>
+        </div>
+</footer>
+    <script src="assets/js/script_index.js"></script>
+</body>
+</html>

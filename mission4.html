@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission 4 - Escape Game Accessible</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <div class="banner-image">
+                <img src="assets/images/anne.jpg" alt="Anne de La Flamme">
+            </div>
+            <div class="banner-overlay"></div>
+        </div>
+        <a href="index.html#accueil" class="retour-link">Retour à la page d'accueil</a>
+        <h1>Mission : compléter le formulaire</h1>
+    </header>
+    <main>
+        <p>Cette nulle d'Anne propose son aide, elle connait quelqu'un qui pourrait te donner un nouvel indice. Elle a envoyé le formulaire à compléter à Émilie qui est non voyante. Indique les informations ci-dessous dans les bons champs, envoie le formulaire à cette personne et tu auras l'indice.</p>
+        <p> Liste des informations à renseigner : 
+        <div class="tag">Docteur</div>
+        <div class="tag">Juiphe</div>
+        <div class="tag">Psychologue sans diplôme</div>
+        <div class="tag">06xxxxxxxx</div>
+        <div class="tag">docteur.juiphe@gmail.com</div> 
+        <div class="tag">Paris</div> 
+        <div class="tag">Chupacabra</div> </p>
+        
+        <form>
+        <div class="info-label">
+            <input type="text" id="nom" aria-label="Entrez votre nom" class="input-hidden">
+        </div>
+        <div class="info-label">
+            <input type="text" id="titre" aria-label="Entrez votre titre" class="input-hidden">
+        </div>
+        <div class="info-label">
+            <input type="text" id="adresse" aria-label="Entrez votre adresse" class="input-hidden">
+        </div>
+        <div class="info-label">
+            <input type="text" id="metier" aria-label="Entrez votre métier" class="input-hidden">
+        </div>
+        <div class="info-label">
+            <input type="text" id="ville" aria-label="Entrez votre ville" class="input-hidden">
+        </div>
+        <div class="info-label">
+            <input type="text" id="telephone" aria-label="Entrez votre numéro de téléphone" class="input-hidden">
+        </div>
+        <div class="info-label">
+            <input type="text" id="mail" aria-label="Entrez votre mail" class="input-hidden">
+        </div>
+    </form>
+        <button id="valider" class="btn-hidden">Envoyer</button>
+
+           <!-- Modale de succès -->
+    <div id="modalBravo" class="modal" role="dialog" aria-labelledby="modalBravoTitle" aria-describedby="modalBravoContent" aria-modal="true">
+    <div class="modal-content">
+        <span class="close" aria-label="Fermer la modale de succès" onclick="closeModal('modalBravo')" tabindex="0">&times;</span>
+        <h2 id="modalBravoTitle"> <span role="img" aria-hidden="true">🎉</span> Bravo !</h2>
+         <img src="assets/images/juiphe.jpg" alt="Docteur Juiphe de la Flamme">
+        <p id="modalBravoContent">Avoir des labels et les relier correctement aux champs permet aux utilisateurs, utilisant des lecteurs d'écran, de comprendre facilement quelles informations doivent être saisies dans chaque champ. Ils permettent aussi aux personnes avec un handicap cognitif de comprendre l'information attendue. Astuce : en mettant un lecteur d'écran (comme Voice Over ou Talkback), tu aurais eu l'information attendue pour chaque champs.</p>
+        <p>Indice : Say My Name</p>
+    </div>
+</div>
+
+    <!-- Modale d'échec -->
+    <div id="modalPerdu" class="modal" role="dialog" aria-labelledby="modalPerduTitle" aria-describedby="modalPerduContent" aria-modal="true">
+    <div class="modal-content">
+        <span class="close" aria-label="Fermer la modale d'échec" onclick="closeModal('modalPerdu')" tabindex="0">&times;</span>
+        <h2 id="modalPerduTitle">Perdu !</h2>
+        <img src="assets/images/juiphenon.jpg" alt="Docteur Juiphe de la Flamme : Installez-vous">
+        <p id="modalPerduContent">Un ou plusieurs champs ont une valeur incorrecte. Réessaie.</p>
+    </div>
+</div>
+    </main>
+
+ 
+
+    <script src="assets/js/scriptform.js"></script>
+    </body>
+</html>
